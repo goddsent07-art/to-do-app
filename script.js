@@ -43,6 +43,8 @@ function renderTasks() {
 
         list.appendChild(li);
     });
+const remaining = tasks.filter(task => !task.completed).length;
+document.getElementById("taskCounter").textContent = remaining + " tasks left";
 }
 
 function addTask() {
@@ -62,3 +64,9 @@ function addTask() {
 }
 
 renderTasks();
+
+document.getElementById("taskInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        addTask();
+    }
+});
