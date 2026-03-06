@@ -29,7 +29,7 @@ function renderTasks() {
         }
 
         const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "🗑";
+        deleteBtn.textContent = "Delete";
 
         deleteBtn.onclick = () => {
             tasks.splice(index, 1);
