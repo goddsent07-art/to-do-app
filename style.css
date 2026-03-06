@@ -56,10 +56,17 @@ li {
     display: flex;
     align-items: center;
     background: #fafafa;
-    padding: 10px;
-    border-radius: 6px;
-    margin-bottom: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
     animation: fadeIn 0.25s ease;
+}
+
+li:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
 li span {
@@ -68,8 +75,10 @@ li span {
 }
 
 li button {
-    background: #eaeaea;
-    color: #333;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 li button:hover {
