@@ -29,7 +29,7 @@ function renderTasks() {
         }
 
         const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "Delete";
+        deleteBtn.textContent = "🗑";
 
         deleteBtn.onclick = () => {
             tasks.splice(index, 1);
@@ -70,3 +70,13 @@ document.getElementById("taskInput").addEventListener("keypress", function(event
         addTask();
     }
 });
+
+document.getElementById("clearTasks").onclick = () => {
+    tasks = [];
+    saveTasks();
+    renderTasks();
+};
+
+document.getElementById("toggleTheme").onclick = () => {
+    document.body.classList.toggle("dark");
+};
