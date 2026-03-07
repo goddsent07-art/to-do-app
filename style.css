@@ -55,16 +55,17 @@ ul {
 li {
     display: flex;
     align-items: center;
+    gap: 12px;
     background: #fafafa;
-    padding: 10px;
+    padding: 12px;
     border-radius: 6px;
-    margin-bottom: 8px;
-    animation: fadeIn 0.25s ease;
+    margin-bottom: 10px;
 }
-
 li span {
-    flex-grow: 1;
-    margin-left: 10px;
+    flex: 1;
+    margin-left: 8px;
+    margin-right: 12px;
+    word-break: break-word;
 }
 
 li button {
@@ -74,6 +75,11 @@ li button {
 
 li button:hover {
     background: #ddd;
+}
+
+li input[type="checkbox"]{
+    width:16px;
+    height:16px;
 }
 
 #taskCounter {
